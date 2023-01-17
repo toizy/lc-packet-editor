@@ -25,8 +25,8 @@ type
 		cbTypes: TComboBox;
 		procedure FormCreate(Sender: TObject);
 		procedure cbTypesCloseUp(Sender: TObject);
-        procedure lbKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
         procedure FormClose(Sender: TObject; var Action: TCloseAction);
+		procedure lbKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
 	private
 		{ Private declarations }
 	public
@@ -85,7 +85,7 @@ begin
 	end;
 
 	for i := 0 to Integer(MSG_MAX) - 1 do
-		cbTypes.Items.AddObject(Ti.ToString, TObject(i));
+		cbTypes.Items.AddObject(i.ToString, TObject(i));
 
 	for i := 0 to Length(LKeeper.FilterMask) - 1 do
 		if (LKeeper.FilterMask[i]) then
