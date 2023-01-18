@@ -53,7 +53,7 @@ begin
 	if (Index >= MAX_PATTERN_ARRAY_LENGTH) then
 		Exit(0);
 
-	if (Index < Length(FPattern)) then
+	if (Index <= Length(FPattern)) then
 		SetLength(FPattern, Index + 1);
 
 	SetLength(FPattern[Index].Mask, 0);
